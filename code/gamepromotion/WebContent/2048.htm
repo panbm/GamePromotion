@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://tianchengyuan.sinaapp.com/2048/ -->
+<html><head _wxlaelhepjgkhpnfpeodbobgikmbjecnne_="shake_1.0" ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=300dpi, initial-scale=0.5, maximum-scale=1, user-scalable=no, minimal-ui">
+
+
+  <title>玩游戏，赢奖品！</title>
+  <link href="./2048_files/main-4.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="http://tianchengyuan.sinaapp.com/2048/img/favicon.ico">
+  <link rel="apple-touch-icon" href="http://tianchengyuan.sinaapp.com/2048/img/apple-touch-icon.png">
+    <script type="text/javascript" async="" src="./2048_files/ga.js"></script><script type="text/javascript" async="" src="./2048_files/sm.js"></script><script type="text/javascript" src="./2048_files/jquery.min.js"></script>
+    <script type="text/javascript">
+    var murl = window.location.origin + window.location.pathname;
+    if ($(window).width() < 500) {
+      var girdWidth = 50;
+    } else {
+      girdWidth = 90;
+    }
+
+    //admaster
+    var _smq = _smq || [];
+    _smq.push(['_setAccount', '640c7df', new Date()]);
+    _smq.push(['pageview']);
+
+    (function () {
+      var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+      sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/sm.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+    })();
+
+    //ga
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29156015-1']);
+    _gaq.push(['_addOrganic', 'soso', 'w']);
+    _gaq.push(['_addOrganic', 'sogou', 'query']);
+    _gaq.push(['_addOrganic', 'yodao', 'q']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+    //$("body").keydown(function() {
+    _smq.push(['custom', '首页', '玩游戏，赢礼品！', '游戏开始']);
+    _gaq.push(['_trackEvent', '天成园2048', '玩游戏，赢礼品！', '游戏开始']);
+    //});
+     function GetUrlParameter() {
+            var username = "user";
+            var returnVal = "";  
+            try {  
+                var paramUrl = window.location.search;  
+                //处理长度  
+                if (paramUrl.length > 0) {  
+                    paramUrl = paramUrl.substring(1, paramUrl.length);  
+                    var paramUrlArray = paramUrl.split("&");  
+                    for (var i = 0; i < paramUrlArray.length; i++) {  
+                        if (paramUrlArray[i].toLowerCase().indexOf(username.toLowerCase()) != -1) {  
+                            var temp = paramUrlArray[i].split("=");  
+                            if (temp[0].toLowerCase() == username.toLowerCase()) {  
+                                returnVal = temp[1];  
+                                break;  
+                            }  
+                        }  
+                    }  
+                }  
+            }  
+            catch (e) { }
+			var a = document.getElementById("user");
+            a.innerHTML = returnVal;
+        };
+	
+    function sendUserMsg(){
+	  var url = "http://gamejoy.sinaapp.com/GetScore"
+      var a  = document.getElementById("user").innerHTML;
+      var b =  document.getElementById("bestscore").innerText;
+      window.location.href=url+"?user="+a+"&score="+b;
+	};
+
+	
+    </script>
+</head>
+<body  onload= "GetUrlParameter()" style=""><script src="./2048_files/jiathis.php" charset="utf-8"></script><link href="./2048_files/jiathis_share.css" rel="stylesheet" type="text/css"><iframe frameborder="0" style="position: absolute; display: none; opacity: 0;"></iframe><div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div><div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div><iframe frameborder="0" src="./2048_files/jiathis_utility.htm" style="display: none;"></iframe>
+	<div class="container">
+	<div class="heading">
+	    <h1 class="title" style="color: limegreen">富平天成园生态花园酒店！</h1>
+	    <h1 class="title">玩游戏赢礼品！</h1>
+	    <div class="scores-container">
+	      <div class="score-container">0</div>
+	      <div id="bestscore" class="best-container">0</div>
+	    </div>
+	  </div>
+	  <div class="above-game">
+	    <p class="game-intro">1024，你懂的！</p>
+	    <a class="restart-button" onclick="_smq.push([&#39;custom&#39;, &#39;首页&#39;, &#39;玩游戏，赢礼品！&#39;, &#39;新游戏&#39;]);_gaq.push([&#39;_trackEvent&#39;, &#39;天成园2048&#39;, &#39;玩游戏，赢礼品！&#39;, &#39;新游戏&#39;]);">新游戏</a>
+	  </div>
+
+	  <div class="game-container">
+	    <div class="game-message">
+	      <p></p>
+	      <div class="lower">
+	          <a class="keep-playing-button">请继续</a>
+	          <a class="retry-button">再来一次</a>
+	      </div>
+	      <div class="buy">
+	          <a href="http://tcyjd.com/zxyd.asp" target="_blank" onclick="_smq.push([&#39;custom&#39;, &#39;天成园2048&#39;, &#39;购买&#39;, &#39;游戏结束&#39;]);">点我定酒店！</a>
+	      </div>
+
+	    </div>
+
+	    <div class="grid-container">
+	    <div class="grid-row">
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+     </div>
+	    <div class="grid-row">
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+     </div>
+	    <div class="grid-row">
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+     </div>
+	    <div class="grid-row">
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+       <div class="grid-cell"></div>
+     </div>
+	  </div>
+
+	    <div class="tile-container"><div class="tile tile-2 tile-position-1-2 tile-new"><div class="tile-inner" style="font-size: 22.5px; font-family: 黑体;">2.可乐</div></div><div class="tile tile-2 tile-position-2-4 tile-new"><div class="tile-inner" style="font-size: 22.5px; font-family: 黑体;">2.可乐</div></div></div>
+	  </div>
+	  <p>玩法说明：</p>
+	  <p>1.滑动方块，将两个带有相同文字的方块重合就可以生成新的方块，类似于2+2=4, 4+4=8.</p>
+	  <p>2.关注公众号"fptianchengyuan"，根据自己玩到的最高关卡，截图发给“天成园”微信公众号，到天成园消费即可到领取相应奖品。</p>
+	  <p>3.每个账号每天限领一次，且每次必须比上一次高分。最高可获得天成园<em style="color: red; font-style: normal; font-weight: normal;">别墅</em>住宿一晚哦，还不快来！</p>
+	  <p>4.快分享到朋友圈看谁拿的奖品最大</p>
+      <p id="user">test</p>
+	  <button type="button" onclick="sendUserMsg()">提交分数</button>
+	<!-- JiaThis Button BEGIN -->
+	<div>
+	  <div class="jiathis_style_32x32" style="float: left;">
+	  <a class="jiathis_button_weixin" onclick="_smq.push([&#39;custom&#39;, &#39;首页&#39;, &#39;分享&#39;, &#39;微信&#39;]);_gaq.push([&#39;_trackEvent&#39;, &#39;天成园2048&#39;, &#39;分享&#39;, &#39;微信&#39;]);" title="分享到微信"><span class="jiathis_txt jtico jtico_weixin"></span></a>
+	  <a class="jiathis_button_douban" onclick="_smq.push([&#39;custom&#39;, &#39;首页&#39;, &#39;分享&#39;, &#39;豆瓣&#39;]);_gaq.push([&#39;_trackEvent&#39;, &#39;天成园2048&#39;, &#39;分享&#39;, &#39;豆瓣&#39;]);" title="分享到豆瓣"><span class="jiathis_txt jtico jtico_douban"></span></a>
+	  <a class="jiathis_button_tsina" onclick="_smq.push([&#39;custom&#39;, &#39;首页&#39;, &#39;分享&#39;, &#39;微博&#39;]);_gaq.push([&#39;_trackEvent&#39;, &#39;天成园2048&#39;, &#39;分享&#39;, &#39;微博&#39;]);" title="分享到新浪微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+	  <a class="jiathis_button_tqq" onclick="_smq.push([&#39;custom&#39;, &#39;首页&#39;, &#39;分享&#39;, &#39;qq微博&#39;]);_gaq.push([&#39;_trackEvent&#39;, &#39;天成园2048&#39;, &#39;分享&#39;, &#39;qq微博&#39;]);" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
+	  <a class="jiathis_button_qzone" onclick="_smq.push([&#39;custom&#39;, &#39;首页&#39;, &#39;分享&#39;, &#39;qzone&#39;]);_gaq.push([&#39;_trackEvent&#39;, &#39;天成园2048&#39;, &#39;分享&#39;, &#39;qzone&#39;]);" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+	  <a class="jiathis_button_renren" onclick="_smq.push([&#39;custom&#39;, &#39;首页&#39;, &#39;分享&#39;, &#39;人人网&#39;]);_gaq.push([&#39;_trackEvent&#39;, &#39;天成园2048&#39;, &#39;分享&#39;, &#39;人人网&#39;]);" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+	  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+	  </div>
+	  <div class="buy2">
+     <a href="http://tcyjd.com/zxyd.asp" target="_blank" onclick="_smq.push([&#39;custom&#39;, &#39;天成园2048&#39;, &#39;购买&#39;, &#39;游戏结束&#39;]);">点我定酒店！</a>
+	  </div>
+	  <div class="clear"></div>
+	</div>
+
+	<script type="text/javascript">
+
+	//      $(".jiathis_button_weixin").click(function(){
+	//      });
+
+	  var jiathis_config={
+     url:murl,
+     summary:"",
+     title:"天成园＃玩游戏赢大奖＃我已赢取奖品！你敢试试吗？",
+     pic:murl+"share.jpg",
+     shortUrl:false,
+     hideMore:true
+	  }
+	</script>
+	<script type="text/javascript" src="./2048_files/jia.js" charset="utf-8"></script><script type="text/javascript" src="./2048_files/plugin.client.js" charset="utf-8"></script><div style="position:absolute;width:0px;height:0px;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="0" height="0" id="JIATHISSWF" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab"><param name="allowScriptAccess" value="always"><param name="swLiveConnect" value="true"><param name="movie" value="http://www.jiathis.com/code/swf/m.swf"><param name="FlashVars" value="z=a"><embed name="JIATHISSWF" src="http://www.jiathis.com/code/swf/m.swf" flashvars="z=a" width="0" height="0" allowscriptaccess="always" swliveconnect="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object></div>
+	<!-- JiaThis Button END -->
+
+	</div>
+	<div id="ad">
+	  <div id="ad0" class="hide"><a href="http://tianchengyuan.img.detuyun.cn/ad0.jpg" target="_blank"><img src="./2048_files/ad0.jpg" alt="ad"></a></div>
+	  <!--<div id="ad1" class="hide"><a href="http://tianchengyuan.img.detuyun.cn/ad0.jpg" target="_blank"><img src="img/ad1.jpg" alt="ad"></a></div>-->
+	</div>
+	<div id="load"><img src="./2048_files/1024.jpg">
+	<img src="./2048_files/2048.jpg">
+	<img src="./2048_files/4096.jpg">
+	<img src="./2048_files/8192.jpg">
+	<img src="./2048_files/16384.jpg"></div>
+	<script>
+	  var my_list = {2:'2.可乐',4:'4.果粒橙',8:'8.啤酒',16:'16.加多宝',32:'32.露露',64:'64.大可乐',128:'128.大果粒橙',256:'256烤翅',512:'512.烤猪蹄',1024:murl+'1024.jpg',2048:murl+'2048.jpg',4096:murl+'4096.jpg',8192:murl+'8192.jpg',16384:murl+'16384.jpg',32768:'32768',65536:'65536',131072:'131072',262144:'262144',524288:'524288',1048576:'1048576',2097152:'2097152',4194304:'4194304',8388608:'8388608',16777216:'16777216',33554432:'33554432',67108864:'67108864',134217728:'134217728',268435456:'268435456',536870912:'536870912',1073741824:'1073741824',2147483648:'2147483648'}
+	  var my_mark = {2:'快去领取一瓶可乐吧！',4:'进击啤酒失败，快去领取一瓶果粒橙吧！',8:'有了啤酒，离炸鸡还会远呢？',16:'没关系，再玩几次就有露露了！',32:'快向大可乐进击吧！',64:'不着急了~慢慢来',128:'后面还有很多小吃呢！',256:'想要再猛烈一些？有猪蹄哦！',512:'有了猪蹄，怎么能没有烤鸭呢！',1024:'太牛啦！吃完饭是不是想睡觉呢!',2048:'恭喜！！获得天成园免费标间一夜！ ',4096:'强者！！有三种房任选住一夜哈哈',8192:'哇塞，套房一夜免费住，快去吧！',16384:'您太棒了，天成园的别墅一夜等着你啊！',32768:'游戏结束, 最高分: 32768',65536:'游戏结束, 最高分: 65536',131072:'游戏结束, 最高分: 131072',262144:'游戏结束, 最高分: 262144',524288:'游戏结束, 最高分: 524288',1048576:'游戏结束, 最高分: 1048576',2097152:'游戏结束, 最高分: 2097152',4194304:'游戏结束, 最高分: 4194304',8388608:'游戏结束, 最高分: 8388608',16777216:'游戏结束, 最高分: 16777216',33554432:'游戏结束, 最高分: 33554432',67108864:'游戏结束, 最高分: 67108864',134217728:'游戏结束, 最高分: 134217728',268435456:'游戏结束, 最高分: 268435456',536870912:'游戏结束, 最高分: 536870912',1073741824:'游戏结束, 最高分: 1073741824',2147483648:'游戏结束, 最高分: 2147483648'}
+	  var my_goal = 1024;
+	</script>
+	<script src="./2048_files/bind_polyfill.js"></script>
+	<script src="./2048_files/classlist_polyfill.js"></script>
+	<script src="./2048_files/animframe_polyfill.js"></script>
+	<script src="./2048_files/keyboard_input_manager.js"></script>
+	<script src="./2048_files/html_actuator.js"></script>
+	<script src="./2048_files/grid.js"></script>
+	<script src="./2048_files/tile.js"></script>
+	<script src="./2048_files/local_storage_manager.js"></script>
+	<script src="./2048_files/game_manager.js"></script>
+	<script>
+	  // Wait till the browser is ready to render the game (avoids glitches)
+	  window.requestAnimationFrame(function (){
+	    var game = new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
+       });
+		//setInterval("ad();", 2000);
+		function ad(){
+		 if($("#ad0").is(":visible")==false){
+		   $("#ad0").show();
+		   $("#ad1").hide();
+		  }else{
+		   $("#ad1").show();
+		   $("#ad0").hide();
+		  }
+		}
+	</script>
+
+</body></html>
